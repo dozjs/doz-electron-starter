@@ -6,7 +6,6 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "pack": "electron-builder --dir",
     "dist": "electron-builder",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +19,6 @@
   },
   "dependencies": {
     "doz": "^1.16.3",
-    "doz-router": "^1.6.0"
+    "doz-router": "^1.6.1"
   }
 }

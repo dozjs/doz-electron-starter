@@ -15,19 +15,32 @@ new Doz({
                 :global body {
                     font-family: Arial, sans-serif;
                     margin: 0;
+                    background: #eee;
+                    color: #1f0c70;
                 }
                 
-                :global a:link {
-                    color: #000;
-                }                
-                
-                :global a:hover {
-                    color: orangered;
+                .logo {
+                    display: block;
+                    margin: auto;
+                    width: 250px;
+                    background: #1f0c70;
+                    border-radius: 8px;
                 }
                 
+                nav a {
+                    text-decoration: none;
+                    padding: 10px;
+                    color: #1f0c70;
+                    border-radius: 8px;
+                }
+                
+                nav a.router-link-active {
+                    background: #1f0c70;
+                    color: #fff;
+                }
+                               
                 .content {
                     padding: 20px;
-                    background: #eee;
                 }
                 
                 nav {
@@ -42,6 +55,7 @@ new Doz({
             </nav>
             
             <div class="content">
+                <img class="logo" src="assets/logo.svg">
                 <doz-router no-destroy>
                     <page-1 route="/"/>
                     <page-2 route="/page-2"/>
