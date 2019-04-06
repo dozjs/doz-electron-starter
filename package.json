@@ -1,0 +1,25 @@
+{
+  "name": "doz-electron-starter",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^4.1.1",
+    "electron-builder": "^20.39.0",
+    "electron-reload": "^1.4.0"
+  },
+  "dependencies": {
+    "doz": "^1.16.3",
+    "doz-router": "^1.6.0"
+  }
+}
