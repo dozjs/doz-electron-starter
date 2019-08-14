@@ -18,7 +18,7 @@
     "electron-reload": "^1.4.0"
   },
   "dependencies": {
-    "doz": "^1.21.1",
-    "doz-router": "^1.6.1"
+    "doz": "latest",
+    "doz-router": "latest"
   }
 }
