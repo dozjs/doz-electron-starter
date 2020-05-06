@@ -1,9 +1,10 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron');
 
-require('electron-reload')(__dirname, {
-    electron: require(__dirname + '/node_modules/electron')
-});
+if (process.env.NODE_ENV === 'development')
+    require('electron-reload')(__dirname, {
+        electron: require(__dirname + '/node_modules/electron')
+    });
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -20,10 +21,12 @@ function createWindow () {
     });
 
     // and load the index.html of the app.
-    mainWindow.loadFile('index.html');
+    //mainWindow.loadFile('index.html');
+    mainWindow.loadURL('file://' + __dirname + '/index.html');
 
     // Open the DevTools.
-    mainWindow.webContents.openDevTools();
+    if (process.env.NODE_ENV === 'development')
+        mainWindow.webContents.openDevTools();
 
     // Emitted when the window is closed.
     mainWindow.on('closed', function () {
