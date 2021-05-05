@@ -7,6 +7,8 @@ new Doz({
     root: '#app',
 
     template(h) {
+        
+        //language=HTML
         return h`
             <style> 
                 :global * {
