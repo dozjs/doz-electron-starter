@@ -2,6 +2,8 @@ const {define, Component} = require('doz');
 
 define('page-1', class extends Component {
     template(h) {
+        
+        //language=HTML
         return h`
             <style> 
                 h2 {
